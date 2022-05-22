@@ -24,7 +24,9 @@
 
 <div class="card shadow-lg border-0 rounded-lg mt-5">
 
-<div class="card-header"><h3 class="text-center font-weight-light my-4">Login</h3></div>
+<div class="card-header"><h3 clas
+
+s="text-center font-weight-light my-4">Login</h3></div>
 <div class="card-body">
 <?php echo $this->session->flashdata('message'); ?>
 
@@ -77,10 +79,9 @@
 <footer class="py-4 bg-light mt-auto">
 <div class="container-fluid px-4">
 
-<div class="d-flex align-items-center justify-
-content-between small">
+<div class="d-flex align-items-center justify-content-between small">
 
-<div class="text-muted">Copyright &copy; Your Website 2021</div>
+<div class="text-muted">Copyright &copy; YourWebsite 2021</div>
 
 <div>
 <a href="#">Privacy Policy</a>
@@ -92,9 +93,7 @@ content-between small">
 </footer>
 </div>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/
-
-js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 
 <script src="<?= base_url('assets/js/scripts.js')?> "></script>
 </body>

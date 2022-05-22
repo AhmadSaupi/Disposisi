@@ -4,19 +4,15 @@ class Login extends CI_Controller
 {
 public function __construct()
 {
-
 parent::__construct();
 $this->load->library('form_validation');
 }
 public function index()
 {
-$this->form_validation->set_rules('email','email', 'required|
-trim');
-$this->form_validation->set_rules('password', 'Password', 'require
-d|trim');
+$this->form_validation->set_rules('email', 'email', 'required|trim');
+$this->form_validation->set_rules('password', 'Password', 'required|trim');
 
-if ($this->form_validation->run() == false) {
-$this->load->view('login/index');
+if ($this->form_validation->run() == false) {$this->load->view('login/index');
 } else {
 $this->dologin();
 }
@@ -26,6 +22,7 @@ public function dologin()
 $user = $this->input->post('email');
 $pswd = $this->input->post('password');
 // cari user berdasarkan email
+
 $user = $this->db->get_where('tb_user', ['email' => $user])->row_array();
 
 // jika user terdaftar
@@ -48,7 +45,6 @@ redirect('admin/menu');
 $this->_updateLastLogin($userid);
 redirect('surat');
 }
-
 } else {
 //jika password salah
 $this->session->set_flashdata('message', '<div class="alert
@@ -70,6 +66,7 @@ $this->db->query($sql);
 }
 public function logout()
 {
+
 // hancurkan semua sesi
 $this->session->sess_destroy();
 redirect(site_url('login'));
