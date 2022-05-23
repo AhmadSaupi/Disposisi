@@ -33,28 +33,32 @@ public function save()
 {
 $this->Masuk_model->saveAjuan();
 if($this->db->affected_rows()>0){
-$this->session->set_flashdata("success","Data Surat Masuk Ber
-
-hasil DiSimpan");
+$this->session->set_flashdata("success","Data Surat Masuk Berhasil DiSimpan");
 }
 redirect('surat_ajuan');
 }
 
 public function getedit($id)
 {
-
-$data = array(
-'title' => 'Update Data Surat Masuk',
-'userlog'=> infoLogin(),
-'surat' => $this->Masuk_model->getById($id),
-'content'=> 'surat_ajuan/edit_form'
-);
-$this->load->view('template_user/main',$data);
-}
-public function edit()
-{
-$this->Masuk_model->editData();
-if($this->db->affected_rows()>0){
-$this->session->set_flashdata("success","Data user Berhasil D
-
-iUpdate");
+    $data = array(
+        'title' => 'Update Data Surat Masuk',
+        'userlog'=> infoLogin(),
+        'surat' => $this->Masuk_model->getById($id),
+        'content'=> 'surat_ajuan/edit_form'
+        );
+        $this->load->view('template_user/main',$data);
+        }
+        public function edit()
+        {
+        $this->Masuk_model->editData();
+        if($this->db->affected_rows()>0){
+        $this->session->set_flashdata("success","Data user Berhasil DiUpdate");
+        }
+        redirect('surat_ajuan');
+        }
+        function delete($id)
+        {
+        $this->Masuk_model->delete($id);
+        redirect('surat_ajuan');
+        }
+        }

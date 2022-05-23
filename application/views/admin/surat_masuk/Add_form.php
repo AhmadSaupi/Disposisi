@@ -2,16 +2,13 @@
 <div class="container-fluid">
 <h1 class="mt-4"></h1>
 <ol class="breadcrumb mb-4">
-<li class="breadcrumb-item"><a href="<?php echo site_ur
-
-l('admin/surat_masuk') ?>">User</a></li>
+<li class="breadcrumb-item"><a href="<?php echo site_url('admin/surat_masuk') ?>">User</a></li>
 
 <li class="breadcrumb-item active"><?php echo $title ?></li>
 </ol>
 <div class="card mb-4">
 <div class="card-body">
-<form action="<?php echo site_url('admin/surat_masuk/edit') ?>
-" method="post" enctype="multipart/form-data" >
+<form action="<?php echo site_url('admin/surat_masuk/edit') ?>" method="post" enctype="multipart/form-data" >
 
 <div class="mb-3">
 <label >NO SURAT MASUK <code>*</code></label>
@@ -39,7 +36,6 @@ placeholder="SURAT DARI" required />
 </div>
 <div class="mb-3">
 <label >TUJUAN SURAT <code>*</code></label>
-
 <input class="form-control" type="text" name="surat_to" placeholder="TUJUAN SURAT" required />
 
 </div>
@@ -52,8 +48,7 @@ placeholder="TANGGAL TERIMA SURAT" required />
 </div>
 <div class="mb-3">
 <label for="username">KETERANGAN <code>*</code></label>
-<textarea class="form-control" placeholder="KETERANGAN" n
-ame="keterangan" id="floatingTextarea2" style="height: 100px"></textarea>
+<textarea class="form-control" placeholder="KETERANGAN" name="keterangan" id="floatingTextarea2" style="height: 100px"></textarea>
 
 </div>
 <div class="mb-3">

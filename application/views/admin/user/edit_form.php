@@ -24,7 +24,7 @@ type="text" name="username" value="<?=$user->username;?>" placeholder="USERNAME"
 <div class="mb-3">
 <label for="full_name">FULL NAME <code>*</code></label>
 
-<input class="form-control" type="text" name="full_name"value="<?=$user->full_name;?>" placeholder="FULL NAME" required />
+<input class="form-control"type="text" name="full_name"value="<?=$user->full_name;?>" placeholder="FULL NAME" required />
 
 </div>
 <div class="mb-3">
